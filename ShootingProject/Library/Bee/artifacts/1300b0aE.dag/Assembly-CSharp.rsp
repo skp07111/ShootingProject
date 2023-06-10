@@ -343,10 +343,11 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/VSSettingsProvider.ref.dll"
-"Assets/Scripts/BulletScript.cs"
-"Assets/Scripts/PlayerScript.cs"
-"Assets/Scripts/ShootingScript.cs"
-"Assets/Scripts/TargetScript.cs"
+"Assets/Scenes/BulletScript.cs"
+"Assets/Scenes/PlayerScript.cs"
+"Assets/Scenes/ShootingScript.cs"
+"Assets/Scenes/TargetMaker.cs"
+"Assets/Scenes/TargetScript.cs"
 -langversion:8.0
 
 /deterministic
