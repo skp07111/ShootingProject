@@ -9,8 +9,8 @@ public class TargetScript : MonoBehaviour
     
     void Start()
     {
-        dir = Vector3.down; // 방향
-        GameObject player = GameObject.Find("Player");
+        dir = Vector3.right; // 방향
+        GameObject player = GameObject.Find("swuniz");
         dir = player.transform.position - transform.position;
         dir.Normalize();
     }

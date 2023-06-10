@@ -16,7 +16,7 @@ public class TargetMaker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float random = Random.Range(-3.0f, 3.0f);
+        float random = Random.Range(-4.0f, 4.0f);
 
         currentTime += Time.deltaTime;
 
@@ -24,7 +24,7 @@ public class TargetMaker : MonoBehaviour
         {
             GameObject target = Instantiate(targetFactory);
             target.transform.position = transform.position;
-            target.transform.position = new Vector3(random, 4.0f, 0);
+            target.transform.position = new Vector3(-9.0f, random, 0);
             currentTime = 0;
         }
     }

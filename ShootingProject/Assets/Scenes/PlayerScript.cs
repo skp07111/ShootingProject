@@ -10,16 +10,16 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
 
-        Vector3 dir = new Vector3(h, 0);
-        if (transform.position.x < -3)
+        Vector3 dir = new Vector3(0, v, 0);
+        if (transform.position.y < -5)
         {
-            transform.position = new Vector2(-3, transform.position.y);
+            transform.position = new Vector2(transform.position.x, -5);
         }
-        else if (transform.position.x > 3) 
+        else if (transform.position.y > 5) 
         {
-            transform.position = new Vector2(3, transform.position.y);
+            transform.position = new Vector2(transform.position.x, 5);
         }
         else
         {

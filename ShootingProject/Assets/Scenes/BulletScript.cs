@@ -8,9 +8,9 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 dir = Vector3.up; // 방향
+        Vector3 dir = Vector3.left; // 방향
         transform.position += dir * speed * Time.deltaTime; // 이동
-        if (transform.position.y < -6.0f || transform.position.y > 6.0f || transform.position.x < -4.0f || transform.position.x > 4.0f)
+        if (transform.position.y < -5.0f || transform.position.y > 5.0f || transform.position.x < -10.0f || transform.position.x > 10.0f)
         {
             Destroy(gameObject); // 화면 밖으로 나갔을 때 오브젝트 삭제
         }
