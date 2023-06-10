@@ -11,10 +11,19 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
 
-        Vector3 dir = new Vector3(h, v, 0);
-
-        transform.position += dir * speed * Time.deltaTime;
+        Vector3 dir = new Vector3(h, 0);
+        if (transform.position.x < -3)
+        {
+            transform.position = new Vector2(-3, transform.position.y);
+        }
+        else if (transform.position.x > 3) 
+        {
+            transform.position = new Vector2(3, transform.position.y);
+        }
+        else
+        {
+            transform.position += dir * speed * Time.deltaTime;
+        }
     }
 }

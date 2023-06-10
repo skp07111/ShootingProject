@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ShootingScript : MonoBehaviour
 {
+    public GameObject player;
     public GameObject bulletFactory; // bullet 공장
     public GameObject shootingLocation; // bullet 생성 위치
-    float speed = 5.0f; // bullet 속도
-    Vector3 dir; // 마우스 방향 저장하는 변수
+    Vector2 dir; // 마우스 방향 저장하는 변수
     Camera cam; // Main Camera
 
     private void Start() 
@@ -21,8 +21,10 @@ public class ShootingScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {// 마우스 클릭 시
             GameObject bullet = Instantiate(bulletFactory);
             bullet.transform.position = shootingLocation.transform.position;
-            bullet.gameObject.GetComponent<Rigidbody2D>().AddForce(dir * speed, ForceMode2D.Impulse);
+            bullet.gameObject.GetComponent<Rigidbody2D>().AddForce(dir, ForceMode2D.Impulse);
         }
-        dir = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -cam.transform.position.z));
+        Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        dir = mousePos - (Vector2)transform.position;
+        transform.up = dir.normalized;
     }
 }
