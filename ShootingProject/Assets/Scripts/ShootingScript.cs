@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShootingScript : MonoBehaviour
 {
-    public GameObject player;
     public GameObject bulletFactory; // bullet 공장
     public GameObject shootingLocation; // bullet 생성 위치
     Vector2 dir; // 마우스 방향 저장하는 변수
