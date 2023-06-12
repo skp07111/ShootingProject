@@ -23,6 +23,7 @@ public class TargetScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         Destroy(other.gameObject);
-        Destroy(gameObject);
-    }
+        Destroy(gameObject, 0.3f);
+        GetComponent<ParticleSystem>().Play();
+    }    
 }

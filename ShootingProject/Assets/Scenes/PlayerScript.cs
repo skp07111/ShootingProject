@@ -11,7 +11,6 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         float v = Input.GetAxis("Vertical");
-
         Vector3 dir = new Vector3(0, v, 0);
         if (transform.position.y < -5)
         {
