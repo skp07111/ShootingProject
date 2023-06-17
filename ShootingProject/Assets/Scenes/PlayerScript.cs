@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -24,5 +25,10 @@ public class PlayerScript : MonoBehaviour
         {
             transform.position += dir * speed * Time.deltaTime;
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        SceneManager.LoadScene("OverScene");
     }
 }

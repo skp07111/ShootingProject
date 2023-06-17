@@ -347,6 +347,7 @@
 "Assets/Scenes/GameDirectorScript.cs"
 "Assets/Scenes/PlayerScript.cs"
 "Assets/Scenes/ShootingScript.cs"
+"Assets/Scenes/StartDirector.cs"
 "Assets/Scenes/TargetMaker.cs"
 "Assets/Scenes/TargetScript.cs"
 -langversion:8.0
