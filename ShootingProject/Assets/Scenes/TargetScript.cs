@@ -25,5 +25,6 @@ public class TargetScript : MonoBehaviour
         Destroy(other.gameObject);
         Destroy(gameObject, 0.3f);
         GetComponent<ParticleSystem>().Play();
+        GetComponent<AudioSource>().Play();
     }    
 }
